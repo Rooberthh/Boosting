@@ -13,7 +13,9 @@ class BoostingOrder extends Model
         'server',
         'account',
         'completed',
-        'booster_id'
+        'booster_id',
+        'league_name',
+        'league_password'
     ];
 
     protected $with = [

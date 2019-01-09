@@ -14,9 +14,6 @@ class AccountOrderController extends Controller
 
     public function store(AccountOrderForm $form)
     {
-
-        $price = $form->get('amountIp') / 10;
-
         try
         {
             $form->save();
@@ -25,7 +22,6 @@ class AccountOrderController extends Controller
         {
             return response(['status' => $e->getMessage()], 422);
         }
-        $user = auth()->user();
 
         $account = Account::where([
             ['server', '=', $form->get('server')],

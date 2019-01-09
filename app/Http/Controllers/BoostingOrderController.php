@@ -30,6 +30,10 @@ class BoostingOrderController extends Controller
             return response()->json([ 'status' => 'You already have an active Order!'], 422);
         }
 
+        if(auth()->user()->hasActiveBoostingOrder()){
+            return response()->json([ 'status' => 'You already have an active Order!'], 422);
+        }
+
         request()->validate([
             'from' => 'required',
             'to' => 'required|gt:from',
@@ -63,6 +67,7 @@ class BoostingOrderController extends Controller
             'from' => request('from'),
             'to' => request('to'),
             'league_name' => auth()->user()->league_name,
+            'league_password' => auth()->user()->league_password,
             'server' => request('server'),
             'price' => $price
         ]);

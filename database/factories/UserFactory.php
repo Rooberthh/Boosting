@@ -50,6 +50,7 @@ $factory->define(App\BoostingOrder::class, function (Faker $faker) {
         'from' => 1,
         'to' => 7,
         'league_name' => $user->league_name,
+        'league_password' => $user->league_password,
         'server' => 'EUW',
         'price' => $faker->randomElement(['20', '30', '40', '50', '60'])
     ];

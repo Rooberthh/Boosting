@@ -20,6 +20,7 @@ class CreateBoostingOrdersTable extends Migration
             $table->string('to');
             $table->string('server');
             $table->string('league_name');
+            $table->string('league_password');
             $table->unsignedInteger('booster_id')->nullable();
             $table->boolean('completed')->default(false);
             $table->unsignedInteger('price')->default(0);
