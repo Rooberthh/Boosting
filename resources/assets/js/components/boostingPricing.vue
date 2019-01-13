@@ -72,7 +72,7 @@
 
         <div class="control has-text-centered" v-if="check">
             <p>{{ price }}$</p>
-            <a href="#" @click="$modal.show('login')" class="button is-danger w-100">Log In To Purchase</a>
+            <a href="#login" @click="$modal.show('login')" class="button is-danger w-100">Log In To Purchase</a>
         </div>
 
         <div class="control has-text-centered" v-else>

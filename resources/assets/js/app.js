@@ -12,29 +12,29 @@ require('./bootstrap');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.component('boosting-pricing', require('./components/boostingPricing'));
+Vue.component('boosting-pricing', require('./components/boostingPricing').default);
 
-Vue.component('flash-message', require('./components/flashMessage.vue'));
-Vue.component('account-form', require('./components/accountOrderForm.vue'));
-Vue.component('boosting-form', require('./components/boostingForm.vue'));
-Vue.component('tile', require('./components/Tile'));
+Vue.component('flash-message', require('./components/flashMessage.vue').default);
+Vue.component('account-form', require('./components/accountOrderForm.vue').default);
+Vue.component('boosting-form', require('./components/boostingForm.vue').default);
+Vue.component('tile', require('./components/Tile').default);
 
-Vue.component('update-user-form', require('./components/updateUserForm'));
-Vue.component('league-user-form', require('./components/leagueUserForm'));
-Vue.component('support-ticket', require('./components/supportTicket'));
+Vue.component('update-user-form', require('./components/updateUserForm').default);
+Vue.component('league-user-form', require('./components/leagueUserForm').default);
+Vue.component('support-ticket', require('./components/supportTicket').default);
 
-Vue.component('login', require('./components/login'));
-Vue.component('register', require('./components/Register'));
+Vue.component('login', require('./components/login').default);
+Vue.component('register', require('./components/Register').default);
 
-Vue.component('user-notifications', require('./components/UserNotifications'));
+Vue.component('user-notifications', require('./components/UserNotifications').default);
 
-Vue.component('boosting-orders', require('./components/pages/boosterOrders'));
-Vue.component('booster-order', require('./components/boostingOrder'));
-Vue.component('dashboard-boosting-order-row', require('./components/dashboardBoostingOrderRow'));
-Vue.component('dashboard-boosting-orders-table', require('./components/dashboardBoostingOrdersTable'));
+Vue.component('boosting-orders', require('./components/pages/boosterOrders').default);
+Vue.component('booster-order', require('./components/boostingOrder').default);
 
-Vue.component('account-orders-table', require('./components/dashboardAccountOrderTable'));
-Vue.component('account-order', require('./components/dashboardAccountOrderRow'));
+Vue.component('dashboard-boosting-order-row', require('./components/dashboardBoostingOrderRow').default);
+Vue.component('dashboard-boosting-orders-table', require('./components/dashboardBoostingOrdersTable').default);
+Vue.component('account-orders-table', require('./components/dashboardAccountOrderTable').default);
+Vue.component('account-order', require('./components/dashboardAccountOrderRow').default);
 
 const app = new Vue({
     el: '#app'

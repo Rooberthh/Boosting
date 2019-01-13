@@ -67,10 +67,10 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="#" @click="$modal.show('login')">Login</a>
+                        <a class="nav-link" href="#login" @click="$modal.show('login')">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" @click="$modal.show('register')">Register</a>
+                        <a class="nav-link" href="#register" @click="$modal.show('register')">Register</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
@@ -125,10 +125,10 @@
                         <a class="nav-link" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="button is-outlined" href="#" @click="$modal.show('login')">Login</a>
+                        <a class="button is-outlined" href="#login" @click="$modal.show('login')">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="button is-danger" href="#" @click="$modal.show('register')">Register</a>
+                        <a class="button is-danger" href="#register" @click="$modal.show('register')">Register</a>
                     </li>
                 </ul>
             </div>

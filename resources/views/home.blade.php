@@ -11,7 +11,7 @@
                     Professional Boosting
                 </h2>
                 <a  href="#features" class="button is-primary is-medium">Learn More</a>
-                <a href="#" @click="$modal.show('register')" class="button is-white has-text-danger is-medium mx-2 font-weight-bold">Register</a>
+                <a href="#register" @click="$modal.show('register')" class="button is-white has-text-danger is-medium mx-2 font-weight-bold">Register</a>
             </div>
         </div>
     </section>
@@ -145,7 +145,7 @@
                                         <li> <i class="fas fa-check has-text-success"></i> Unveritfied Email</li>
                                         <li> <i class="fas fa-check has-text-success"></i> Instant Delivery</li>
                                     </ul>
-                                    <a href="#" @click="$modal.show('login')" class="button is-danger w-100">Log in to purchase</a>
+                                    <a href="#login" @click="$modal.show('login')" class="button is-danger w-100">Log in to purchase</a>
                                 </div>
                             </article>
                         </div>
@@ -160,7 +160,7 @@
                                         <li> <i class="fas fa-check has-text-success"></i> Unveritfied Email</li>
                                         <li> <i class="fas fa-check has-text-success"></i> Instant Delivery</li>
                                     </ul>
-                                    <a href="#" @click="$modal.show('login')" class="button is-danger w-100">Log in to purchase</a>
+                                    <a href="#login" @click="$modal.show('login')" class="button is-danger w-100">Log in to purchase</a>
                                 </div>
                             </article>
                         </div>
