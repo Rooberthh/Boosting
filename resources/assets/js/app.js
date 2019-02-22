@@ -23,7 +23,7 @@ Vue.component('update-user-form', require('./components/updateUserForm').default
 Vue.component('league-user-form', require('./components/leagueUserForm').default);
 Vue.component('support-ticket', require('./components/supportTicket').default);
 
-Vue.component('login', require('./components/login').default);
+Vue.component('login', require('./components/Login').default);
 Vue.component('register', require('./components/Register').default);
 
 Vue.component('user-notifications', require('./components/UserNotifications').default);
