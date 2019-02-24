@@ -64,7 +64,7 @@ $factory->define(App\AccountOrder::class, function (Faker $faker) {
         'account_id' => function(){
             return factory('App\Account')->create()->id;
         },
-
+        'price' => $faker->randomElement(['20', '30', '40', '50', '60'])
     ];
 });
 

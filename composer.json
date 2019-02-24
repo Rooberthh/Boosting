@@ -31,6 +31,7 @@
         "files": ["tests/utilities/functions.php"]
     },
     "autoload-dev": {
+        "classmap": ["tests/traits/InteractsWithStripe.php"],
         "psr-4": {
             "Tests\\": "tests/"
         }

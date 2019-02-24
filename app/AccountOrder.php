@@ -5,21 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Stripe\Charge;
 use Stripe\Customer;
-use Symfony\Component\HttpFoundation\Request;
-use App\Account;
 
 class AccountOrder extends Model
 {
     protected $guarded = [];
-    protected $user;
 
     protected $casts = [
         'sold' => 'boolean'
     ];
 
-    public function __construct($user = null)
+    public function __construct()
     {
-        $this->user = $user;
     }
 
 

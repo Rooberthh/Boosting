@@ -2,14 +2,14 @@
 
 namespace Tests\Unit;
 
-use App\Mail\AccountPurchaseConfirmation;
-use Illuminate\Support\Facades\Mail;
+use App\AccountOrder;
+use InteractsWithStripe;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class AccountOrdersTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase, InteractsWithStripe;
 
     /** @test */
     function authenticated_users_can_purchase_accounts()
@@ -21,39 +21,18 @@ class AccountOrdersTest extends TestCase
             'amountIp' => 20000
         ]);
 
-        $this->json('post', route('accountOrder.store'), [
-            'server' => 'eune',
-            'amountIp' => 20000
-        ]);
+        $token = $this->getStripeToken();
+
+        //Account order instance
+        $order = new AccountOrder();
+
+        $accountOrder = new AccountOrder;
+            $accountOrder->user_id = auth()->user()->id;
+            $accountOrder->account_id = $account->id;
+            $accountOrder->price = 3000;
+
+        $order->createOrder($accountOrder, $token);
 
         $this->assertDatabaseHas('account_orders', ['account_id' => $account->id]);
     }
-
-    /** @test */
-    function confirmation_email_is_sent_upon_purchase()
-    {
-        $this->withExceptionHandling();
-
-        Mail::fake();
-        $this->signIn();
-
-        $account = create('App\Account');
-
-        $token = \Stripe\Token::create([
-            'card' => [
-                'number' => '4242424242424242',
-                'exp_month' => 1,
-                'exp_year' => 2025,
-                'cvc' => 123
-            ]
-        ])->id;
-
-        $this->post(route('accountOrder.store'), [
-            'server' => $account->server,
-            'amountIp' => $account->amountIp
-        ])->assertStatus(200);
-
-        Mail::assertQueued(AccountPurchaseConfirmation::class);
-    }
-
 }
