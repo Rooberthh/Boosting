@@ -1767,8 +1767,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        email: "",
-        password: ""
+        email: "booster@booster.com",
+        password: "password"
       },
       feedback: "",
       loading: false

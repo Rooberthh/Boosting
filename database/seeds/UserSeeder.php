@@ -16,9 +16,9 @@ class UserSeeder extends Seeder
         create('App\BoostingOrder', [], 10);
 
         $developer = create('App\User', [
-            'name' => 'Roberth',
-            'email' => 'Roberth.evaldsson@hotmail.com',
-            'password' => bcrypt('9q7q5q3q1q'),
+            'name' => 'Booster',
+            'email' => 'booster@booster.com',
+            'password' => bcrypt('password'),
         ]);
 
         $developer->assignRole('developer');
