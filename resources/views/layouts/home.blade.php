@@ -31,7 +31,7 @@
     </script>
 
 </head>
-<body>
+<body class="has-navbar-fixed-top">
     <div id="app">
         @include('layouts.nav')
         <main>

@@ -13,7 +13,7 @@
                 <dashboard-boosting-order-row :order="order" :key="order.id"></dashboard-boosting-order-row>
             </tbody>
             <tr v-show="empty">
-                <td colspan="3">You haven't purchased any boosts. </td>
+                <td colspan="4">You haven't purchased any boosts. </td>
             </tr>
         </table>
     </div>

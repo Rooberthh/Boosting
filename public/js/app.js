@@ -39553,7 +39553,7 @@ var render = function() {
             ]
           },
           [
-            _c("td", { attrs: { colspan: "3" } }, [
+            _c("td", { attrs: { colspan: "4" } }, [
               _vm._v("You haven't purchased any boosts. ")
             ])
           ]
