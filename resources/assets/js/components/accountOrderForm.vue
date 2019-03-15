@@ -87,9 +87,10 @@
             buy() {
                 this.stripe.open({
                     name: 'Purchase Account',
+                    email: this.user.email,
                     zipCode: true,
                     amount: this.calc(this.amountIp),
-                    description: 'We do not refund payments'
+                    description: 'Use test card 4242424242424242'
                 });
             },
             calc(ip)
